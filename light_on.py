@@ -7,19 +7,28 @@
 # Version: 2018914
 
 def light_calc(enter_exit_times):
-    times_person_deliminated = enter_exit_times.split("\n")
+    in_out_times = enter_exit_times.split("\n")
     in_times = ""
     out_times = ""
-    for lines in times_person_deliminated:
-        in_out_times = lines.split(" ")
-        in_times += in_out_times[0] + " "
-        out_times += in_out_times[1] + " "
+    for lines in in_out_times:
+        in_out_times = lines.strip(' ')
+    for lines in in_out_times:
+        in_out_times = lines.split(' ')
 
 
-
-
-
-
+        # in_times += in_out_times[0]
+        # out_times += in_out_times[1]
+        # in_times = int(in_times, 10)
+        # light_on_time = 100
+        # light_off_time = 0
+        # i = 0
+        # for times in in_times:
+            # if times < light_on_time:
+                # light_on_time = times
+            # if times+1 >= out_times[i]:
+                # light_off_time = out_times[i]
+            # i += 1
 
 
 times = "1 3"
+light_calc(times)
