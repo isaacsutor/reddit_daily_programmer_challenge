@@ -13,10 +13,12 @@ def light_calc(enter_exit_times):
     for item in range(0, len(in_out_times) - 1, 2):
         in_times.append(in_out_times[item])
         out_times.append(in_out_times[item+1])
-    # print(in_times)
-    # print("\n")
-    # print(out_times)
 
+    in_times = sorted(in_times)
+    out_times = sorted(out_times)
+    print(in_times)
+    print("\n")
+    print(out_times)
     light_on_runtime = 0
     count_out = 0
     count_in = 0
@@ -45,9 +47,9 @@ def light_calc(enter_exit_times):
     print(light_on_runtime)
 
 
-times = "1 3 \n 2 3 \n 4 5"
-# times2 = "2 4 \n 3 6 \n 1 3 \n 6 8"
-# times3 = "6 8 \n 5 8 \n 8 9 \n 5 7 \n 4 7"
-light_calc(times)
-# light_calc(times2)
-# light_calc(times3)
+# times = "1 3 \n 2 3 \n 4 5"
+times2 = "2 4 \n 3 6 \n 1 3 \n 6 8"
+times3 = "6 8 \n 5 8 \n 8 9 \n 5 7 \n 4 7"
+# light_calc(times)
+light_calc(times2)
+light_calc(times3)
