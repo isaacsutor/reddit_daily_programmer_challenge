@@ -13,20 +13,17 @@ def light_calc(enter_exit_times):
     for item in range(0, len(in_out_times) - 1, 2):
         in_times.append(in_out_times[item])
         out_times.append(in_out_times[item+1])
-    # for lines in in_out_times:
-        #in_out_times = lines.split(' ')
-    print(in_times)
-    print("\n")
-    print(out_times)
+    # print(in_times)
+    # print("\n")
+    # print(out_times)
 
     light_on_runtime = 0
-    current_time = 0
     count_out = 0
     count_in = 0
     light_on = False
     for i in range(1, 10):
         if not light_on:
-            if i == in_times[count_in]:
+            if str(i) == in_times[count_in]:
                 light_on = True
                 light_on_runtime += 1
             # i = in_times[count_in]
@@ -39,28 +36,18 @@ def light_calc(enter_exit_times):
                 light_on_runtime += 1
             if (int(in_times[count_in]) <= i) and (count_in < (len(in_times) - 1)):
                 count_in += 1
-        print("Time Step: " + str(i))
-        # print(i)
-        print("Next On Time: " + in_times[count_in])
-        print("Next Off: " + out_times[count_out])
-        print("Light runtime: " + str(light_on_runtime))
-        print()
+        # print("Time Step: " + str(i))
+        # print("Next On Time: " + in_times[count_in])
+        # print("Next Off: " + out_times[count_out])
+        # print("Light runtime: " + str(light_on_runtime))
+        # print()
 
     print(light_on_runtime)
 
 
 times = "1 3 \n 2 3 \n 4 5"
+# times2 = "2 4 \n 3 6 \n 1 3 \n 6 8"
+# times3 = "6 8 \n 5 8 \n 8 9 \n 5 7 \n 4 7"
 light_calc(times)
-
-# in_times += in_out_times[0]
-# out_times += in_out_times[1]
-# in_times = int(in_times, 10)
-# light_on_time = 100
-# light_off_time = 0
-# i = 0
-# for times in in_times:
-# if times < light_on_time:
-# light_on_time = times
-# if times+1 >= out_times[i]:
-# light_off_time = out_times[i]
-# i += 1
+# light_calc(times2)
+# light_calc(times3)
