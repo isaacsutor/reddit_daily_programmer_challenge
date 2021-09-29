@@ -55,9 +55,6 @@ Assorted Moderate Problems
 Assorted Hard Problems
 
 
-
-
-
 Other:
 Recursion + Quick-sort + Merge-sort
 Binary search (+ extras)
