@@ -1,4 +1,16 @@
 
+
+class ShuffleString1528:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        # Time: 6:30
+        shuffled = [None] * len(s)
+        str1 = ""
+        for x in range(len(s)):
+            position = indices[x]
+            shuffled[position] = (s[x])
+        return str1.join(shuffled)
+
+
 class JewelsandStones771:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
         # Time: 1:04
